@@ -1,0 +1,14 @@
+html
+    <span></span>
+        tag de marcação in line, em função de acreção de estilo
+        geralmente usada junto com uma classe específica. <p>.
+    <div></div>
+        importantíssimo. forma boxes de conteúdo, englobando tudo
+        que está dentro deles.
+
+--------------------------------------------------------------------
+
+css 
+    overflow: ;(auto, visible(defaut)/hidden)
+        evita que boxes se sobreponham uns aos outros, pode
+        criar scrolls na página.
