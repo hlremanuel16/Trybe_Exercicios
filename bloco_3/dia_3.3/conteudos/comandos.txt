@@ -12,5 +12,12 @@ css
     overflow: ; (auto, visible(defaut)/hidden)
         evita que boxes se sobreponham uns aos outros, pode
         criar scrolls na página.
-    position: ; (absolute, relative, sticky, left, right)
-        
+    position: ; (x, y, absolute, relative, sticky, left, right)
+        determina qual a ordem e como um elemento pode ser posicionado (renderizado) no 
+        documento (página).
+    top/right/left/bottom(npx, n%)
+        define a distância de um elemento (em ixel ou porcentagem) em relação com os quatro limites da
+        página.
+    z-type
+        define a ordem a qual elementos se sobrepõe na página.
+
