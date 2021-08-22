@@ -9,6 +9,8 @@ html
 --------------------------------------------------------------------
 
 css 
-    overflow: ;(auto, visible(defaut)/hidden)
+    overflow: ; (auto, visible(defaut)/hidden)
         evita que boxes se sobreponham uns aos outros, pode
         criar scrolls na página.
+    position: ; (absolute, relative, sticky, left, right)
+        
