@@ -1,0 +1,38 @@
+div h3:hover{
+    color: white;
+    font-family: fantasy;
+    font-weight: 300;
+}
+
+div{
+    max-width: fit-content;
+    margin: 0;
+}
+
+div:hover {
+    border: solid black;
+}
+
+.div1{
+    background-color: red ;
+    font-style: italic;
+}
+
+.div2{
+    background-color: seagreen;
+}
+
+.div3{
+    background-color: orange;
+    font-size: 110%;
+    font-style: italic;
+}
+
+.div4{
+    background-color: maroon;
+}
+
+.div5{
+    background-color: pink;
+    font-style: italic;
+}
