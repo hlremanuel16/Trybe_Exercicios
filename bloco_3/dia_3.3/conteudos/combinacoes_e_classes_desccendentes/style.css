@@ -1,0 +1,39 @@
+li{
+    font-size: 20px;
+}
+
+li em{
+    font-weight: bold;
+}
+
+.capitalize{
+background-color: yellow;
+max-width: fit-content;
+text-transform: uppercase;
+border: 5px solid white;
+border-left: 0px;
+}
+
+.back-green{
+    background-color: green;
+    max-width: fit-content;
+}
+
+h1, h2, h3{
+    color: red
+    
+}
+
+h1 em{
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+.bluer{
+    color: blue;
+}
+
+.javapinkr{
+    background-color: palevioletred;
+    max-width: fit-content;
+}
