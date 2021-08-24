@@ -1,0 +1,55 @@
+body{
+    background-color: skyblue;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+header img{
+    width: 100%;
+    height: 300px;
+    position: static;
+    z-index: 0;
+    
+}
+
+header h1{
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    color: rgb(231, 198, 49);
+    top: 80px;
+}
+
+header nav{
+    background-color: salmon;
+    font-size: 20px;
+    
+}
+
+article section{
+    background-color: steelblue;
+    color:whitesmoke;
+    font-size: 30px;
+}
+
+section img{
+    position: sticky;
+    width: 50%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+ section h2{
+    background-color: steelblue;
+    color:whitesmoke;
+ }
+
+
+ aside{ 
+    float: right;
+    position: absolute;
+    background-color: tomato;
+    margin: 10px;
+    font-size: 40px;
+}
+ 
