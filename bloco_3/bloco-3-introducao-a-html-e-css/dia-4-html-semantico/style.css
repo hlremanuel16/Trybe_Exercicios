@@ -1,6 +1,5 @@
 body{
     background-color: skyblue;
-    margin-left: 0px;
     margin-top: 0px;
 }
 
@@ -23,9 +22,12 @@ header h1{
 header nav{
     background-color: salmon;
     font-size: 20px;
+    padding: 20px;
     
 }
-
+ header nav a{
+     padding: 150px;
+ }
 article section{
     background-color: steelblue;
     color:whitesmoke;
