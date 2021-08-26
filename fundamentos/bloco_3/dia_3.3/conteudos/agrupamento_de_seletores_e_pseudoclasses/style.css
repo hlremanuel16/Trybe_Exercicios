@@ -9,6 +9,7 @@ ol{
 
 li:hover {
    background-color: black;
+   background-size: contain;
    color: white;
 
 }
