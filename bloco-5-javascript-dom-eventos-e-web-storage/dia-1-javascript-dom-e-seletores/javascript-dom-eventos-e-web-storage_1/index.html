@@ -56,11 +56,20 @@
         */
        const descChangeP = document.getElementsByTagName('p')[1];
        const colorChangeSqr = document.getElementsByClassName('main-content')[0];
-       const colorChangeInSqr = document.getElementsByClassName('center-content')[0]
-       descChangeP.textContent = 'Gostaria de ter conquitado no mercado de tecnologia.';
+       const colorChangeInSqr = document.getElementsByClassName('center-content')[0];
+       const correctChangeH1 = document.getElementsByTagName('p')[1];
+       const UpCaseChangeP = document.getElementsByTagName('p')[0];
+       const showAllPs = document.getElementsByTagName('p');
+       descChangeP.textContent = 'Gostaria de ter conquitado minha vaga no mercado de tecnologia.';
        colorChangeSqr.style.backgroundColor = 'rgb(76,164,109)';
        colorChangeInSqr.style.backgroundColor = 'white';
-
+       correctChangeH1.innerText = 'Exercício 5.1 - JavaScript';
+       UpCaseChangeP.style.textTransform = 'upperCase';
+       for (let index = 0; index < showAllPs.length; index++) {
+         console.log(showAllPs[index]);
+         
+       }
+      
     </script>
   </body>
 </html>
