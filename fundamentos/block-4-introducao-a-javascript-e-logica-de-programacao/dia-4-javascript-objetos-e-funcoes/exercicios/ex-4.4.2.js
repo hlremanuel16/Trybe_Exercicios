@@ -31,7 +31,7 @@ function lowestInGroup(arr){
     return low;
 }
 
-console.log(lowestInGroup([2, 4, 6, 7, 10, 0, -3]))
+console.log(lowestInGroup([2, 4, 6, 7, 10, 0, -3]));
 
 
 function bWord(arr){
@@ -47,9 +47,47 @@ function bWord(arr){
 
 console.log(bWord(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
 
-function nOccurence(arr){
-    count = 0
-    for (var c of arr){
-        if ()
+function maisRepetido(numeros) {
+    let contRepetido = 0;
+    let contNumero = 0;
+    let indexNumeroRepetido = 0;
+    for (let index in numeros) {
+      let verificaNumero = numeros[index];
+      for (let index2 in numeros) {
+        if (verificaNumero === numeros[index2]) {
+          contNumero += 1;
+        }
+      }
+      if (contNumero > contRepetido) {
+        contRepetido = contNumero;
+        indexNumeroRepetido = index;
+      }
+      contNumero = 0;
     }
+    return numeros[indexNumeroRepetido];
+  }
+console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3]));
+
+function somaDosElementos(num){
+  let numeros = [];
+  soma = 0
+  for (let index = 1; index < num + 1; index++) {
+    numeros.push(index)
+    soma += index
+  }
+  return numeros.join(' + ')
+}
+
+console.log(somaDosElementos(5) + ' = ' + soma)
+
+function verificaFimPalavra(palavra, fimPalavra) {
+    palavra = palavra.split('');
+    fimPalavra = fimPalavra.split('');
+    controle = true;
+    for (let index = 0; index < fimPalavra.length; index += 1) {
+      if (palavra[palavra.length - fimPalavra.length + index] != fimPalavra[index]) {
+        controle = false;
+      }
+    }
+    return controle;
 }
