@@ -1,0 +1,60 @@
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+        </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+    </main>
+    <script>
+        // Acesse o elemento elementoOndeVoceEsta .
+        const acEle = document.getElementById("elementoOndeVoceEsta");
+
+        //Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+        const pai = acEle.parentElement;
+        pai.style.color = 'red';
+
+        //acesse o primeiroFilhoDoFilho e adicione um texto a ele.
+        const primeiroFilhoDoFilho = acEle.firstElementChild;
+        primeiroFilhoDoFilho.innerText = 'filho do filho';
+
+        //Acesse o primeiroFilho a partir de pai
+        const primeiroFilho = pai.firstElementChild;
+
+        //Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+        const primeiroFilho2 = acEle.previousElementSibling;
+
+        //Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+        const atencao = acEle.nextSibling;
+
+        //Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+        const terceiroFilho = acEle.nextElementSibling;
+        
+        //Agora acesse o terceiroFilho a partir de pai. 
+        terceiroFilho2 = pai.lastElementChild.previousElementSibling;
+
+        //Crie um irmão para elementoOndeVoceEsta 
+        const elementoOndeVoceEstaSib = document.createElement('section');
+        elementoOndeVoceEstaSib.id = 'elementoOndeVoceEstaSib';
+        pai.appendChild(elementoOndeVoceEstaSib);
+
+        //Crie um filho para elementoOndeVoceEsta 
+        const terceiroFilhoDoFilho = document.createElement('section');
+        terceiroFilhoDoFilho.id = 'terceiroFilhoDoFilho';
+        acEle.appendChild(terceiroFilhoDoFilho);
+
+        //Crie um filho para primeiroFilhoDoFilho 
+        const primeiroNeto = document.createElement('section');
+        primeiroNeto.id = 'primeiroNeto';
+        primeiroFilhoDoFilho.appendChild(primeiroNeto);
+
+        //A partir desse ultimo filho criado, acesse terceiroFilho.
+        primeiroNeto2 = pai.lastElementChild.previousElementSibling.previousElementSibling;
+        console.log(primeiroNeto);
+    </script>
+</body>
