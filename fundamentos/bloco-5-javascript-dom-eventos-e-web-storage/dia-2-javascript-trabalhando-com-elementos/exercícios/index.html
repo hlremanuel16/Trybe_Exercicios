@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //1
+
+      const ttl = document.createElement('h1');
+      ttl.id = 'titulo';
+      ttl.innerText = 'Exercício 5.2 - JavaScript DOM';
+      const body = document.getElementsByTagName('body')[0];
+      body.id = 'body';
+      body.appendChild(ttl);
+
+      //2
+      const main = document.createElement('main');
+      main.id = 'main';
+      main.innerText = 'Main content';
+      main.classList.add('main-content')
+      body.appendChild(main);
+
+      //3
+      const sec = document.createElement('section');
+      sec.id = 'section';
+      sec.innerText = 'center-content';
+      main.classList.add('center-content')
+      main.appendChild(sec);
+
+      //4
+      const p = document.createElement('p');
+      p.id = 'p';
+      p.innerText = 'A lesson without pain is meanigless.';
+      sec.appendChild(p);
+
+      //5
+      const sec2 = document.createElement('section');
+      sec2.id = 'sec2';
+      sec2.classList.add('left-content');
+      main.appendChild(sec2);
+
+      //6
+      const sec3 = document.createElement('section');
+      sec3.id = 'sec3';
+      sec3.classList.add('right-content');
+      main.appendChild(sec3);
+
+      //7
+      const img = document.createElement('img');
+      img.id = 'img';
+      img.classList.add('small-image');
+      img.src = 'https://picsum.photos/200';
+      sec2.appendChild(img);
+
+      //8
+      const ul = document.createElement('ul')
+      ul.id ='ul';
+      sec3.appendChild(ul);
+      let extenso = ['um','dois','três','quatro','cinco',
+      'seis','sete', 'oito', 'nove', 'dez'];
+      for (let i in extenso) {
+        const li = document.createElement('li');
+        li.innerText = extenso[i];
+        ul.appendChild(li);
+      }
+      
+      //9 
+      let range = ['h3', 'h3', 'h3'];
+      for (let i in range) {
+        const h3 = document.createElement('h3');
+        h3.id = 'h3';
+        h3.innerText = range[i];
+        main.appendChild(h3);
+      }
+
+      // parte 2
+
+      //1
+      ttl.classList.add('title')
+
+      //2
+      let classer = document.getElementsByTagName('h3');
+      for (let i = 0; i < 3; i += 1) {
+        classer[i].classList.add('description');
+      }
+
+      //3
+      const getSec2 = document.getElementById('sec2');
+      main.removeChild(getSec2);
+
+      //4
+      sec3.style.margin = 'auto';
+
+      //5
+      const secParent = sec.parentNode;
+      secParent.style.backgroundColor = 'green';
+
+      //6
+      const liRm = document.getElementsByTagName('li');
+      ul.removeChild(liRm[9]);
+      ul.removeChild(liRm[8]);
+
+    </script>
+  </body>
+</html>
