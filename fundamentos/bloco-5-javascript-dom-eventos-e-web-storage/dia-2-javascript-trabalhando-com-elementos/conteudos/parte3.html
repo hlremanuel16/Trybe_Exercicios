@@ -1,0 +1,49 @@
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+        </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+    </main>
+    <script>
+        // Acesse o elemento elementoOndeVoceEsta .
+        const acEle = document.getElementById("elementoOndeVoceEsta");
+
+        //Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+        const pai = acEle.parentElement;
+        pai.style.color = 'red';
+
+        //acesse o primeiroFilhoDoFilho e adicione um texto a ele.
+        const primeiroFilhoDoFilho = acEle.firstElementChild;
+        primeiroFilhoDoFilho.innerText = 'filho do filho';
+
+        //Acesse o primeiroFilho a partir de pai
+        const primeiroFilho = pai.firstElementChild;
+
+        //Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+        const primeiroFilho2 = acEle.previousElementSibling;
+
+        //Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+        const atencao = acEle.nextSibling;
+
+        //Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+        const terceiroFilho = acEle.nextElementSibling;
+        
+        //Agora acesse o terceiroFilho a partir de pai. 
+        terceiroFilho2 = pai.lastElementChild.previousElementSibling;
+
+        //Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+        for (let index = pai.childNodes.lenght - 1; index >= 0; index -= 1) {
+          let node = paiDoPai.childNodes[index];
+          if (node.id !== 'elementoOndeVoceEsta'){
+            node.remove()
+          }   
+        }
+    </script>
+</body>
