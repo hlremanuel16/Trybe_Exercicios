@@ -46,6 +46,4 @@ class Forms extends Component {
   }
 }
 
-
-
 export default Forms;
