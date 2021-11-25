@@ -1,31 +1,26 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
 
 /**
-* @author
-* @class Sex
-**/
+ * @author
+ * @class Sex
+ **/
 
 class Sex extends Component {
-  state = {}
+  state = {};
   render() {
     const { value, handleChange } = this.props;
-    return(
+    return (
       <div>
         <label>
           sex
-          <select 
-            value={value} 
-            onChange={handleChange} 
-            name="chooseSex">
-            <option name='sex'>M</option>
+          <select value={value} onChange={handleChange} name="chooseSex">
+            <option name="sex">M</option>
             <option name="sex">F</option>
           </select>
         </label>
       </div>
-      )
-   }
- }
+    );
+  }
+}
 
-
-export default Sex
+export default Sex;
